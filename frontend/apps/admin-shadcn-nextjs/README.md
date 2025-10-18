@@ -1,44 +1,83 @@
-# 项目简介
+# Moderate Admin - Shadcn Next.js
 
-本项目基于 **Next.js** 和 **shadcn/ui**，支持 App Router 模式下的页面 KeepAlive，拥有强化的路由系统和高效的状态管理，适合中大型后台管理系统开发。
+现代化企业级中后台前端解决方案，基于 **Next.js 15+**、**Shadcn UI** 和 **Tailwind CSS 4.x** 构建。
 
 ## 技术栈
 
-- **Next.js**：React 生态下的服务端渲染与静态网站生成框架，支持 App Router，性能优异，SEO 友好。
-- **shadcn/ui**：现代化、可定制的 React 组件库，设计美观，易于扩展和主题定制。
-- **Redux**：强大的全局状态管理方案，方便数据流管理和调试。
+- **React 19**：最新版本的 React 框架
+- **Next.js 15+**：支持 App Router 和 Turbopack，性能优异，SEO 友好
+- **Shadcn UI**：基于 Radix UI 的现代化组件库，高度可定制
+- **Tailwind CSS 4.x**：原子化 CSS 框架，快速构建美观界面
+- **Redux Eazy**：简化的 Redux 状态管理方案
+- **TypeScript 5.x**：类型安全的 JavaScript 超集
 
 ## 主要特性
 
-- **App Router + KeepAlive**：支持页面级缓存，切换路由时保持组件状态，提升用户体验。
-- **强化路由系统**：基于 Next.js App Router，支持嵌套路由、动态路由、权限控制等高级特性。
-- **高效状态管理**：使用 Redux 统一管理全局状态，便于维护和扩展。
-- **现代 UI 体验**：shadcn/ui 提供丰富的组件和主题，快速搭建美观界面。
+- ✨ **App Router + KeepAlive**：支持页面级缓存，切换路由时保持组件状态
+- 🚀 **强化路由系统**：支持嵌套路由、动态路由、多标签页、权限控制
+- 💪 **高效状态管理**：使用 Redux Eazy 统一管理全局状态
+- 🎨 **现代 UI 体验**：Shadcn UI + Tailwind CSS，快速搭建美观界面
+- 🌐 **国际化支持**：内置 i18next，支持多语言切换
+- 📱 **响应式设计**：完美支持桌面端和移动端
 
-## 文件结构示例
+## 项目结构
 
 ```
-apps/
-    admin-shadcn-nextjs/
-        app/           # Next.js App Router 页面与布局
-        components/    # 通用 React 组件
-        features/      # 业务模块（Redux slice）
-        store/         # Redux 配置
-        styles/        # 全局样式
-        public/        # 静态资源
-        README.md
+admin-shadcn-nextjs/
+├── src/
+│   ├── app/              # Next.js App Router 页面与布局
+│   ├── components/       # 通用 React 组件
+│   ├── service/          # Redux stores & API services
+│   ├── router/           # 路由配置和 KeepAlive
+│   ├── common/           # 工具函数和 Hooks
+│   ├── shadcn/           # Shadcn UI 组件
+│   └── i18n/             # 国际化配置
+├── public/               # 静态资源
+└── README.md
 ```
 
-## shadcn/ui 的优势与玩法
+## 快速开始
 
-- 组件高度可定制，支持 Tailwind CSS，轻松实现个性化主题。
-- 组件库按需引入，减少打包体积。
-- 丰富的表单、弹窗、数据展示等后台常用组件。
-- 支持无障碍和响应式设计。
+```bash
+# 安装依赖
+pnpm install
 
-## Next.js 的优势
+# 启动开发服务器
+pnpm run dev
 
-- 支持服务端渲染（SSR）、静态生成（SSG）、增量静态生成（ISR）。
-- App Router 提供更灵活的路由和布局能力。
-- 内置 API 路由，前后端一体化开发。
-- 优秀的性能优化和开发体验。
+# 构建生产版本
+pnpm run build
+
+# 启动生产服务器
+pnpm run start
+```
+
+访问 http://localhost:3002 即可查看应用。
+
+## 开发指南
+
+### 添加新页面
+
+在 `src/app` 目录下创建新的路由文件夹，Next.js 会自动识别并生成路由。
+
+### 添加 Shadcn UI 组件
+
+```bash
+# 使用 shadcn-ui CLI 添加组件
+npx shadcn-ui@latest add <component-name>
+```
+
+### 状态管理
+
+使用 Redux Eazy 进行状态管理，在 `src/service/stores` 目录下创建新的 store。
+
+### 国际化
+
+在 `src/i18n/locales` 目录下添加新的语言文件。
+
+## 技术亮点
+
+- **Shadcn UI**：组件高度可定制，支持 Tailwind CSS，轻松实现个性化主题
+- **Next.js**：支持 SSR、SSG、ISR，App Router 提供灵活的路由和布局能力
+- **TypeScript**：完整的类型支持，提升开发效率和代码质量
+- **响应式设计**：支持无障碍访问，完美适配各种设备
