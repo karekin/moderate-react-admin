@@ -11,7 +11,6 @@ const AuthGuard = ({ children }: PropsWithChildren) => {
   const router = useRouter();
   const pathName = usePathname();
   useEffect(() => {
-    debugger
     if (token) {
       if (!pathName.includes("dashboard")) {
         router.push("/dashboard");

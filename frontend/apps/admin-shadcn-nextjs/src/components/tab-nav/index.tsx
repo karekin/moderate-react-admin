@@ -7,7 +7,6 @@ import { useGuideContext } from "../guide-eazy";
 const TabNav = () => {
   const guide = useGuideContext();
   useEffect(() => {
-    debugger;
     guide.setGuideIndex(2);
   }, []);
   return <CustomTabs />;

@@ -14,7 +14,6 @@ export class AppHelper extends HelperBase {
     this.guideIns = guideIns;
   }
   getGuideIns() {
-    debugger
     return this.guideIns?.current;
   }
   createApp(

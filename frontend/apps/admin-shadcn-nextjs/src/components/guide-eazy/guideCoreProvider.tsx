@@ -90,7 +90,6 @@ export const GuideCoreProvider = <T extends string = any>(
     if (!step) {
       return;
     }
-    debugger;
     //@ts-ignore
     if (overList[step.id]) {
       return;
